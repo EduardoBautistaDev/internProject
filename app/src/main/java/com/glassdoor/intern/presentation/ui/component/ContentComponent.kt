@@ -40,8 +40,6 @@ import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import coil.compose.rememberAsyncImagePainter
-import coil.compose.rememberImagePainter
 import com.glassdoor.intern.presentation.model.HeaderUiModel
 import com.glassdoor.intern.presentation.model.ItemUiModel
 import com.glassdoor.intern.presentation.theme.InternTheme
@@ -103,8 +101,15 @@ private fun HeaderComponent(
     ) {
         with(header) {
             /**
-             * TODO: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
+             * DONE: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
              */
+            with(header) {
+                Column {
+                    items.forEach{ item ->
+                        ItemComponent(item = item)
+                    }
+                }
+            }
         }
     }
 }
@@ -148,7 +153,7 @@ private fun ItemComponent(item: ItemUiModel) = Card {
                 contentScale = ContentScale.Crop,
                 error = rememberVectorPainter(Icons.Default.Warning),
                 model = AsyncImage(
-                    model = "https://upload.wikimedia.org/wikipedia/commons/e/e1/Glassdoor_logo.svg",
+                    model = imageUrl,
                     contentDescription = null,
                 ),
 
@@ -191,13 +196,28 @@ private typealias HeaderAndItems = Pair<HeaderUiModel, List<ItemUiModel>>
 
 private class ContentComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderAndItems> by previewParameterProviderOf(
-        TODO("Define UI models for preview purposes")
+//        DONE("Define UI models for preview purposes")
+        HeaderUiModel(
+            items = listOf(
+                ItemUiModel("Item Title 1", "Item Description 1", null, "10:00"),
+                ItemUiModel("Item Title 2", "Item Description 2", null, "11:00"),
+            )
+        ) to listOf(
+            ItemUiModel("Item Title 3", "Item Description 3", null, "12:00"),
+            ItemUiModel("Item Title 4", "Item Description 4", null, "13:00"),
+        )
+
     )
 
 private class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
-        TODO("Define UI models for preview purposes")
-
+//        DONE("Define UI models for preview purposes")
+        HeaderUiModel(
+            items = listOf(
+                ItemUiModel("Item Title 1", "Item Description 1", null, "10:00"),
+                ItemUiModel("Item Title 2", "Item Description 2", null, "11:00"),
+            )
+        )
     )
 
 private class ItemComponentPreviewParameterProvider :

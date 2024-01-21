@@ -9,10 +9,14 @@
 
 package com.glassdoor.intern.data.model
 
+import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 /**
  * TODO: Define the structure of the DTO model based on the server response
  */
 @JsonClass(generateAdapter = true)
-internal class HeaderInfoDto
+internal data class HeaderInfoDto(
+    @Json(name = "items")
+    val items: List<ItemInfoDto>
+)
