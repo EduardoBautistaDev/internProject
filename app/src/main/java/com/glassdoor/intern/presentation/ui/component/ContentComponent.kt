@@ -150,7 +150,6 @@ private fun ItemComponent(item: ItemUiModel) = Card {
                 model = AsyncImage(
                     model = "https://upload.wikimedia.org/wikipedia/commons/e/e1/Glassdoor_logo.svg",
                     contentDescription = null,
-
                 ),
 
             )
