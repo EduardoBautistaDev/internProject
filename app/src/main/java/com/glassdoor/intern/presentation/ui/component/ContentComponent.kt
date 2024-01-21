@@ -40,6 +40,8 @@ import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import coil.compose.rememberAsyncImagePainter
+import coil.compose.rememberImagePainter
 import com.glassdoor.intern.presentation.model.HeaderUiModel
 import com.glassdoor.intern.presentation.model.ItemUiModel
 import com.glassdoor.intern.presentation.theme.InternTheme
@@ -133,7 +135,6 @@ private fun ItemComponent(item: ItemUiModel) = Card {
                 text = description,
                 style = MaterialTheme.typography.bodySmall,
             )
-
             AsyncImage(
                 modifier = Modifier
                     .align(Alignment.Top)
@@ -142,7 +143,12 @@ private fun ItemComponent(item: ItemUiModel) = Card {
                 contentDescription = title,
                 contentScale = ContentScale.Crop,
                 error = rememberVectorPainter(Icons.Default.Warning),
-                model = TODO("[Request an image download](https://github.com/coil-kt/coil#requests)"),
+                model = AsyncImage(
+                    model = "https://upload.wikimedia.org/wikipedia/commons/e/e1/Glassdoor_logo.svg",
+                    contentDescription = null,
+
+                ),
+
             )
         }
     }
@@ -188,6 +194,7 @@ private class ContentComponentPreviewParameterProvider :
 private class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
         TODO("Define UI models for preview purposes")
+
     )
 
 private class ItemComponentPreviewParameterProvider :
