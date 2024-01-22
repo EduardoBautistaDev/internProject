@@ -11,8 +11,8 @@ package com.glassdoor.intern.presentation
 
 import android.os.Parcelable
 import androidx.compose.runtime.Immutable
-import com.glassdoor.intern.presentation.model.HeaderUiModel
 import com.glassdoor.intern.presentation.model.ItemUiModel
+import com.glassdoor.intern.presentation.model.HeaderUiModel
 import kotlinx.parcelize.Parcelize
 
 @Immutable

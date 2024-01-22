@@ -11,14 +11,22 @@ package com.glassdoor.intern.presentation.mapper
 
 import com.glassdoor.intern.domain.model.HeaderInfo
 import com.glassdoor.intern.presentation.model.HeaderUiModel
+import java.time.Instant
 import java.time.format.DateTimeFormatter
 import javax.inject.Inject
 
 internal class HeaderUiModelMapper @Inject constructor() {
 
-    private val dateFormatter: DateTimeFormatter = TODO("Define date formatting pattern")
+    private val dateFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("MMM d, yyyy")
+//        DONE("Define date formatting pattern")
 
     fun toUiModel(headerInfo: HeaderInfo): HeaderUiModel = with(headerInfo) {
-        TODO("Convert domain model to UI model")
+//        DONE("Convert domain model to UI model")
+        HeaderUiModel(
+            id = id,
+            title = title,
+            description = description,
+            timestamp = timestamp,
+        )
     }
 }

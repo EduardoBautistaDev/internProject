@@ -12,6 +12,7 @@ package com.glassdoor.intern.data.repository
 import com.github.michaelbull.result.Err
 import com.github.michaelbull.result.Ok
 import com.github.michaelbull.result.Result
+import com.glassdoor.intern.data.mapper.HeaderInfoMapper
 import com.glassdoor.intern.data.source.InfoApi
 import com.glassdoor.intern.domain.model.HeaderInfo
 import com.glassdoor.intern.domain.repository.InfoRepository
@@ -19,24 +20,28 @@ import timber.log.Timber
 import javax.inject.Inject
 
 /**
- * TODO: Inject the correct mapper dependency
+ * DONE: Inject the correct mapper dependency
  */
 internal class InfoRepositoryImpl @Inject constructor(
     private val infoApi: InfoApi,
+    private val headerInfoMapper: HeaderInfoMapper,
 ) : InfoRepository {
 
     override suspend fun getHeaderInfo(): Result<HeaderInfo, Throwable> =
         try {
             with(infoApi.getInfo()) {
                 when {
-                    header != null -> Ok(TODO("Convert DTO into domain model"))
-                    error != null -> Err(TODO("Convert to error"))
-                    else -> Err(TODO("Convert to error"))
+                    //DONE("Convert DTO into domain model")
+                    header != null -> Ok(headerInfoMapper.toDomain(header, items))
+                    //DONE("Convert to error")
+                    error != null -> Err(IllegalStateException("API error: $error"))
+                    //DONE("Convert to error")
+                    else -> Err(IllegalStateException("Unexpected response structure"))
                 }
             }
         } catch (throwable: Throwable) {
             Timber.e(throwable, "InfoRepositoryImpl")
-
-            Err(TODO("Convert to error"))
+            //DONE("Convert to error")
+            Err(throwable)
         }
 }

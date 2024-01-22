@@ -10,10 +10,12 @@
 package com.glassdoor.intern.presentation.di
 
 import com.glassdoor.intern.presentation.MainUiState
+import com.glassdoor.intern.presentation.model.HeaderUiModel
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
+import java.time.Instant
 
 @Module
 @InstallIn(ViewModelComponent::class)
@@ -21,5 +23,11 @@ internal object MainModule {
 
     @Provides
     fun provideMainUiState(): MainUiState =
-        TODO("Define default values and provide initial state")
+//        DONE("Define default values and provide initial state")
+    MainUiState(
+    errorMessage = null,
+    header = HeaderUiModel(0L, "", "", "") ,
+    isLoading = false,
+    items = emptyList()
+    )
 }

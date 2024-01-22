@@ -13,18 +13,21 @@ import android.os.Parcelable
 import androidx.compose.runtime.Immutable
 import kotlinx.parcelize.IgnoredOnParcel
 import kotlinx.parcelize.Parcelize
+import java.time.Instant
 
 /**
  * DONE: Define the structure of the UI model based on the domain model
  */
 @Immutable
 @Parcelize
-internal data class HeaderUiModel(
-    val items: List<ItemUiModel>,
+internal class HeaderUiModel(
+    val id: Long,
+    val title: String,
+    val description: String,
+    val timestamp: String,
 ) : Parcelable {
 
     @IgnoredOnParcel
-    //        DONE: Define empty state
-    val isEmpty: Boolean = items.isEmpty()
-
+    val isEmpty: Boolean = title.isBlank() || description.isBlank() || timestamp == "" || id == 0L
+//        DONE("Define empty state")
 }

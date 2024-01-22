@@ -40,10 +40,11 @@ import androidx.compose.ui.tooling.preview.PreviewParameterProvider
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.glassdoor.intern.presentation.model.HeaderUiModel
 import com.glassdoor.intern.presentation.model.ItemUiModel
+import com.glassdoor.intern.presentation.model.HeaderUiModel
 import com.glassdoor.intern.presentation.theme.InternTheme
 import com.glassdoor.intern.utils.previewParameterProviderOf
+import java.time.Instant
 
 private val headerBorderStrokeWidth: Dp = 3.dp
 private val imageSize: Dp = 120.dp
@@ -103,13 +104,12 @@ private fun HeaderComponent(
             /**
              * DONE: [Declare the UI](https://developer.android.com/codelabs/jetpack-compose-basics#5) based on the UI model structure
              */
-            with(header) {
-                Column {
-                    items.forEach{ item ->
-                        ItemComponent(item = item)
-                    }
-                }
+
+            Column{
+                Text(text = header.title)
+                Text(text = header.description)
             }
+
         }
     }
 }
@@ -198,13 +198,14 @@ private class ContentComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderAndItems> by previewParameterProviderOf(
 //        DONE("Define UI models for preview purposes")
         HeaderUiModel(
-            items = listOf(
-                ItemUiModel("Item Title 1", "Item Description 1", null, "10:00"),
-                ItemUiModel("Item Title 2", "Item Description 2", null, "11:00"),
-            )
+            id = 123,
+            title = "Astrology",
+            description = "Astrology is nice",
+            timestamp = "2023-06-02T20:05:05.177Z",
+
         ) to listOf(
-            ItemUiModel("Item Title 3", "Item Description 3", null, "12:00"),
-            ItemUiModel("Item Title 4", "Item Description 4", null, "13:00"),
+            ItemUiModel("Aquarius", "Item Description 3", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Capricornus_IAU.svg/1204px-Capricornus_IAU.svg.png", "2023-06-02T20:05:05.177Z"),
+            ItemUiModel("Sagittarius", "Item Description 4", "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sidney_Hall_-_Urania%27s_Mirror_-_Aquarius%2C_Piscis_Australis_%26_Ballon_Aerostatique.jpg/800px-Sidney_Hall_-_Urania%27s_Mirror_-_Aquarius%2C_Piscis_Australis_%26_Ballon_Aerostatique.jpg", "2023-06-02T20:05:05.177Z"),
         )
 
     )
@@ -213,10 +214,10 @@ private class HeaderComponentPreviewParameterProvider :
     PreviewParameterProvider<HeaderUiModel> by previewParameterProviderOf(
 //        DONE("Define UI models for preview purposes")
         HeaderUiModel(
-            items = listOf(
-                ItemUiModel("Item Title 1", "Item Description 1", null, "10:00"),
-                ItemUiModel("Item Title 2", "Item Description 2", null, "11:00"),
-            )
+            id = 1253453,
+            title = "Astrology",
+            description = "Astrology is nice",
+            timestamp = "2023-06-02T20:05:05.177Z"
         )
     )
 
@@ -226,6 +227,6 @@ private class ItemComponentPreviewParameterProvider :
             title = "Item Title 0",
             description = "Item Description 0",
             imageUrl = null,
-            timestamp = "10:00",
+            timestamp = "2023-06-02T20:05:05.177Z",
         ),
     )

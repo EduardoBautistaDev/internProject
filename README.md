@@ -39,46 +39,46 @@ For each correctly completed instruction, **1 point** is awarded, which must the
 - [x] [ErrorMessageComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ErrorMessageComponent.kt): Call an action that hides the error message
 - [x] [ErrorMessageComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ErrorMessageComponent.kt): Define how long the error message will be displayed
 - [x] [ErrorMessageComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/ErrorMessageComponent.kt): Define the [background color](https://developer.android.com/jetpack/compose/modifiers#scope-safety), as well as [the color, style, and alignment](https://developer.android.com/jetpack/compose/text/style-text) of the error message
-- [ ] [HeaderInfo.kt](app/src/main/java/com/glassdoor/intern/domain/model/HeaderInfo.kt): Determine undefined model properties
-- [ ] [HeaderInfoDto.kt](app/src/main/java/com/glassdoor/intern/data/model/HeaderInfoDto.kt): Define the structure of the DTO model based on the server response
-- [ ] [HeaderInfoMapper.kt](app/src/main/java/com/glassdoor/intern/data/mapper/HeaderInfoMapper.kt): Complete the transformation logic
+- [x] [HeaderInfo.kt](app/src/main/java/com/glassdoor/intern/domain/model/HeaderInfo.kt): Determine undefined model properties
+- [x] [HeaderInfoDto.kt](app/src/main/java/com/glassdoor/intern/data/model/HeaderInfoDto.kt): Define the structure of the DTO model based on the server response
+- [x] [HeaderInfoMapper.kt](app/src/main/java/com/glassdoor/intern/data/mapper/HeaderInfoMapper.kt): Complete the transformation logic
 - [x] [HeaderUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/HeaderUiModel.kt): Define empty state
 - [x] [HeaderUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/HeaderUiModel.kt): Define the structure of the UI model based on the domain model
-- [ ] [HeaderUiModelMapper.kt](app/src/main/java/com/glassdoor/intern/presentation/mapper/HeaderUiModelMapper.kt): Convert domain model to UI model
-- [ ] [HeaderUiModelMapper.kt](app/src/main/java/com/glassdoor/intern/presentation/mapper/HeaderUiModelMapper.kt): Define date formatting pattern
-- [ ] [InfoApi.kt](app/src/main/java/com/glassdoor/intern/data/source/InfoApi.kt): Apply the [get annotation](https://square.github.io/retrofit) and specify the correct endpoint from `BuildConfig`
-- [ ] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert DTO into domain model
-- [ ] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert to error
-- [ ] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert to error
-- [ ] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert to error
-- [ ] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Inject the correct mapper dependency
+- [x] [HeaderUiModelMapper.kt](app/src/main/java/com/glassdoor/intern/presentation/mapper/HeaderUiModelMapper.kt): Convert domain model to UI model
+- [x] [HeaderUiModelMapper.kt](app/src/main/java/com/glassdoor/intern/presentation/mapper/HeaderUiModelMapper.kt): Define date formatting pattern
+- [x] [InfoApi.kt](app/src/main/java/com/glassdoor/intern/data/source/InfoApi.kt): Apply the [get annotation](https://square.github.io/retrofit) and specify the correct endpoint from `BuildConfig`
+- [x] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert DTO into domain model
+- [x] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert to error
+- [x] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert to error
+- [x] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Convert to error
+- [x] [InfoRepositoryImpl.kt](app/src/main/java/com/glassdoor/intern/data/repository/InfoRepositoryImpl.kt): Inject the correct mapper dependency
 - [x] [ItemUiModel.kt](app/src/main/java/com/glassdoor/intern/presentation/model/ItemUiModel.kt): Determine the key value
-- [ ] [LoggingModule.kt](app/src/main/java/com/glassdoor/intern/utils/logging/LoggingModule.kt): [Annotate the DI module](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules) with correct definitions and [component](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules)
-- [ ] [MainActivity.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainActivity.kt): [Annotate a class for dependency injection](https://developer.android.com/training/dependency-injection/hilt-android#android-classes)
-- [ ] [MainActivity.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainActivity.kt): Define the main composable to display
-- [ ] [MainModule.kt](app/src/main/java/com/glassdoor/intern/presentation/di/MainModule.kt): Define default values and provide initial state
-- [ ] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): [Consume UI state safely from the ViewModel](https://developer.android.com/codelabs/jetpack-compose-advanced-state-side-effects#3)
-- [ ] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): Define UI state for preview purposes
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Define the correct methods as callbacks
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Delegate method to `uiStateMachine`
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Emit the transformed UI model as state
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Inject the correct header mapper dependency
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Refresh the screen only when the header is empty
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Separate handling and update correct properties `previousUiState`
-- [ ] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Transform the header domain model to the UI model
-- [ ] [Strings.xml](app/src/main/res/values/strings.xml): Provide a suitable application name
-- [ ] [TokenInterceptor.kt](app/src/main/java/com/glassdoor/intern/data/network/TokenInterceptor.kt): Declare the email address from your resume as a token
-- [ ] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Declare a [title](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Text(androidx.compose.ui.text.AnnotatedString,androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.font.FontStyle,androidx.compose.ui.text.font.FontWeight,androidx.compose.ui.text.font.FontFamily,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextDecoration,androidx.compose.ui.text.style.TextAlign,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextOverflow,kotlin.Boolean,kotlin.Int,kotlin.Int,kotlin.collections.Map,kotlin.Function1,androidx.compose.ui.text.TextStyle)) using the app name resource from strings
-- [ ] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Define a component and use the state to preview it
-- [ ] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Define all possible states for preview purposes
+- [x] [LoggingModule.kt](app/src/main/java/com/glassdoor/intern/utils/logging/LoggingModule.kt): [Annotate the DI module](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules) with correct definitions and [component](https://developer.android.com/training/dependency-injection/hilt-android#hilt-modules)
+- [x] [MainActivity.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainActivity.kt): [Annotate a class for dependency injection](https://developer.android.com/training/dependency-injection/hilt-android#android-classes)
+- [x] [MainActivity.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainActivity.kt): Define the main composable to display
+- [x] [MainModule.kt](app/src/main/java/com/glassdoor/intern/presentation/di/MainModule.kt): Define default values and provide initial state
+- [x] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): [Consume UI state safely from the ViewModel](https://developer.android.com/codelabs/jetpack-compose-advanced-state-side-effects#3)
+- [x] [MainScreen.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/MainScreen.kt): Define UI state for preview purposes
+- [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Define the correct methods as callbacks
+- [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Delegate method to `uiStateMachine`
+- [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Emit the transformed UI model as state
+- [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Inject the correct header mapper dependency
+- [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Refresh the screen only when the header is empty
+- [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Separate handling and update correct properties `previousUiState`
+- [x] [MainViewModel.kt](app/src/main/java/com/glassdoor/intern/presentation/MainViewModel.kt): Transform the header domain model to the UI model
+- [x] [Strings.xml](app/src/main/res/values/strings.xml): Provide a suitable application name
+- [x] [TokenInterceptor.kt](app/src/main/java/com/glassdoor/intern/data/network/TokenInterceptor.kt): Declare the email address from your resume as a token
+- [x] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Declare a [title](https://developer.android.com/reference/kotlin/androidx/compose/material/package-summary#Text(androidx.compose.ui.text.AnnotatedString,androidx.compose.ui.Modifier,androidx.compose.ui.graphics.Color,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.font.FontStyle,androidx.compose.ui.text.font.FontWeight,androidx.compose.ui.text.font.FontFamily,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextDecoration,androidx.compose.ui.text.style.TextAlign,androidx.compose.ui.unit.TextUnit,androidx.compose.ui.text.style.TextOverflow,kotlin.Boolean,kotlin.Int,kotlin.Int,kotlin.collections.Map,kotlin.Function1,androidx.compose.ui.text.TextStyle)) using the app name resource from strings
+- [x] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Define a component and use the state to preview it
+- [x] [TopBarComponent.kt](app/src/main/java/com/glassdoor/intern/presentation/ui/component/TopBarComponent.kt): Define all possible states for preview purposes
 
 #### Bonus points
 
 - [ ] The application does not crash
 - [ ] The previously loaded list remains on the screen after the error appears
-- [ ] All fulfilled `TODO` instructions remain in place, and the prefix is replaced with the word `DONE`
-- [ ] The project's change history has the [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0)
-- [ ] [The project has a history of changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
+- [x] All fulfilled `TODO` instructions remain in place, and the prefix is replaced with the word `DONE`
+- [x] The project's change history has the [conventional commit messages](https://www.conventionalcommits.org/en/v1.0.0)
+- [x] [The project has a history of changes](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)
 
 #### What does not affect the rating
 
